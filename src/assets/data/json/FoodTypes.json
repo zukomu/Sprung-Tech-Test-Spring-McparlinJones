@@ -1,0 +1,27 @@
+[
+  {
+    "name": "Apple",
+    "healthRestored": 10,
+    "price": 2
+  },
+  {
+    "name": "Bread",
+    "healthRestored": 15,
+    "price": 1
+  },
+  {
+    "name": "Dubious Food",
+    "healthRestored": 1,
+    "price": 0
+  },
+  {
+    "name": "Golden Apple",
+    "healthRestored": 100,
+    "price": 30
+  },
+  {
+    "name": "Pineapple Pizza",
+    "healthRestored": 500,
+    "price": 99999
+  }
+]

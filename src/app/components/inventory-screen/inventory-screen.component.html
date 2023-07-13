@@ -1,0 +1,40 @@
+<div class="panel">
+    <div class="panel-decor">
+        <div class="panel-decor-row">
+            <img class="top-arrow decor-shape" src="../../../assets/TechTestComponents/Images/InventoryMain/IMG_DecorShape_Top.png">
+        </div>
+        <div class="panel-decor-row">
+            <img class="inv-icon" src="../../../assets/TechTestComponents/Images/InventoryMain/IMG_InventoryIcon.png">
+        </div>
+        <div class="panel-decor-row">
+            <img class="left-corner quart-rotate" src="../../../assets/TechTestComponents/Images/InventoryMain/IMG_CornerBrace.png">
+            <img class="right-corner half-rotate" src="../../../assets/TechTestComponents/Images/InventoryMain/IMG_CornerBrace.png">
+        </div>
+        <div class="panel-decor-row">
+            <img class="left-arrow half-rotate decor-shape" src="../../../assets/TechTestComponents/Images/InventoryMain/IMG_DecorShape_Other.png">
+            <img class="right-arrow decor-shape" src="../../../assets/TechTestComponents/Images/InventoryMain/IMG_DecorShape_Other.png">
+        </div>
+        <div class="panel-decor-row">
+            <img class="left-corner" src="../../../assets/TechTestComponents/Images/InventoryMain/IMG_CornerBrace.png">
+            <img class="right-corner three-quart-rotate" src="../../../assets/TechTestComponents/Images/InventoryMain/IMG_CornerBrace.png"></div>
+        <div class="panel-decor-row">
+            <img class="bottom-arrow decor-shape quart-rotate" src="../../../assets/TechTestComponents/Images/InventoryMain/IMG_DecorShape_Other.png"></div>
+        <div class="grid">
+            <div class="background"></div>
+        </div>
+    </div>
+    <div class="contents">
+        <div *ngFor="let row of rows; let i = index" class="contents-row">
+            <div class="item" [class.empty]="item === null" *ngFor="let item of row; let j = index" [id]="i * 8 + j"
+                (dblclick)="useItem(i * 8 + j)" (dragend)="endDrag(i * 8 + j)" (mouseenter)="startHover(i * 8 + j, $event)" (mouseleave)="endHover()">
+                <label *ngIf="item != null && item.item.maxStackSize > 1" class="stack-size">{{item.stackSize}}</label>
+                <img [class.mirror-flip]="item.item.itemType === 'Weapon'" *ngIf="item != null" [src]="relativeImageUrl + item.item.itemIcon">
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<app-inventory-tooltip *ngIf="showTooltip != null" [item]="showTooltip" ></app-inventory-tooltip>
+<!-- <app-inventory-tooltip [item]="inventoryService.inventory[0].item" ></app-inventory-tooltip> -->

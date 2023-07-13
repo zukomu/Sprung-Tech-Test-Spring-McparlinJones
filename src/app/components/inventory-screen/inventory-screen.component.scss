@@ -1,0 +1,144 @@
+.panel{
+    background-image: url("../../../assets/TechTestComponents/Images/InventoryMain/IMG_InventoryPanel.png");
+    margin: auto;
+    z-index: 1;
+    position: relative;
+    // these values are derived from opening the image in GIMP and checking the cavas sizes. 
+    // Obviously, using static values like this wouldn't be acceptable for a commercial release, 
+    // but for a quick project like this with limited resources, I figured it would be fine.
+    width: 1115px;
+    height: 932px;
+    user-select: none;
+    .panel-decor{
+        .decor-shape{
+            filter: drop-shadow(0px 8px 0.3px #00000044);
+            &.quart-rotate{
+                filter: drop-shadow(8px 0px 0.3px #00000044);
+            }
+            &.half-rotate{
+                filter: drop-shadow(0px -8px 0.3px #00000044);
+            }
+            &.three-quart-rotate{
+                filter: drop-shadow(-8px 0px 0.3px #00000044);
+            }
+        }
+        .panel-decor-row{
+            position: relative;
+            img{
+                position: absolute;
+                z-index: 4;
+                &.left-corner{
+                    left: 69px;
+                }
+                &.right-corner{
+                    left: 954px;
+                }
+            }
+        }
+        .panel-decor-row:nth-child(1){
+            top: 25px;
+            .top-arrow{
+                left: calc((1115px - 97px) / 2);
+            }
+        }
+        .panel-decor-row:nth-child(2){
+            top: 115px;
+            .inv-icon{
+                left: calc((1115px - 203px) / 2);
+            }
+        }
+        .panel-decor-row:nth-child(3){
+            top: 204px;
+        }
+        .panel-decor-row:nth-child(4){
+            .left-arrow{
+                left: 29px;
+            }
+            .right-arrow{
+                left: 1005px;
+            }
+            top: 479px;
+        }
+        .panel-decor-row:nth-child(5){
+            top: 745px;
+        }
+        .panel-decor-row:nth-child(6){
+            top: 828px;
+            .bottom-arrow{
+                left: calc((1115px - 80px) / 2);
+            }
+        }
+        .grid{
+            background-image: url("../../../assets/TechTestComponents/Images/InventoryMain/IMG_GridBorder.png");
+            width: 940px;
+            height: 597px;
+            left: 86px;
+            top: 223px;
+            position: relative;
+            .background{
+                background-image: url("../../../assets/TechTestComponents/Images/InventoryMain/IMG_GridBackground.png");
+                width: 910px;
+                height: 562px;
+                position: relative;
+                z-index: -1;
+                top: calc((597px - 562px)/2);
+                left: calc((940px - 910px)/2);
+            }
+        }
+    }
+    .contents-row{
+        display: flex;
+        position: absolute;
+        width: 892px;
+        left: 110px;
+        justify-content: space-between;
+        @for $i from 1 through 5 {
+            &:nth-child(#{$i}){
+                // arrived at these numbers through a bit of trial and error. the 247px get's the first row to where it needs to be, 
+                // then we add 114px which accounts for the size of the boxes + the height of the border 
+                top: calc(244px + 112.6px * (#{$i} - 1));
+            }
+        }
+        .item{
+            width: 103px;
+            height: 103px;
+            display: flex;
+            z-index: 5;
+            position: relative;
+            img{
+                margin:auto;
+            cursor: grab;
+            &:active{
+                cursor: grabbing;
+            }
+            }
+            &:hover:not(.empty){
+                background-image: url("../../../assets/TechTestComponents/Images/InventoryMain/IMG_SlotHighlight.png");
+                background-repeat: round;
+                .stack-size{
+                    color: #d7cfc6;
+                }
+            }
+            .stack-size{
+                font-family: "NumericsFont";
+                font-size: 20px;
+                color: #905f2d;
+                position: absolute;
+                left: 5px;
+                top: 5px;
+            }
+        }
+    }
+}
+.quart-rotate{
+    transform: rotate(90deg);
+}
+.half-rotate{
+    transform: rotate(180deg);
+}
+.three-quart-rotate{
+    transform: rotate(270deg);
+}
+.mirror-flip{
+    transform: scaleX(-1);
+}

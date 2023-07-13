@@ -1,0 +1,37 @@
+<div id="tooltipContainer" [style.left]="left" [style.top]="top">
+    <div class="tooltip-text-container">
+        <h1 class="title">
+            {{item.name}}
+        </h1>
+        <div [ngSwitch]="item.itemType">
+            <div *ngSwitchCase="itemTypeNames.Food" class="details">
+                <label>
+                    Restores {{food.healthRestored}} Health When Eaten.
+                </label>
+            </div>
+            <div *ngSwitchCase="itemTypeNames.SpellTome" class="details">
+                <label>
+                    {{spellKnown}}
+                </label>
+            </div>
+            <div *ngSwitchCase="itemTypeNames.Potion" class="details">
+                <label>
+                    {{potionEffect}}
+                </label>
+            </div>
+            <div *ngSwitchCase="itemTypeNames.CraftingComponent" class="details">
+                <label>
+
+                </label>
+            </div>
+            <div *ngSwitchCase="itemTypeNames.Weapon" class="details">
+                <label>
+                    {{weaponDetails}}
+                </label>
+            </div>
+        </div>
+        <label class="price">
+            {{item.price}}G
+        </label>
+    </div>
+</div>

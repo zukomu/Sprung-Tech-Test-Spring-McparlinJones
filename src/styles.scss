@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+    background-image: url("../src/assets/TechTestComponents/Images/Background/UI_Background.png");
+}
+@font-face {
+    font-family: MenusPrimaryFont;
+    src: url("../src/assets/TechTestComponents/Fonts/MenusPrimaryFont.ttf");
+}
+@font-face {
+    font-family: NumericsFont;
+    src: url("../src/assets/TechTestComponents/Fonts/NumericsFont.otf") format(opentype);
+}
+@font-face {
+    font-family: ToolTipDescription;
+    src: url("../src/assets/TechTestComponents/Fonts/ToolTipDescription.ttf");
+}

@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Potion of Healing",
+    "effect": {
+      "description": "Heals you for 20 points",
+      "name": "Healing",
+      "duration": 0,
+      "potency": 20
+    },
+    "price": 30
+  },
+  {
+    "name": "Potion of Flight",
+    "effect": {
+      "description": "Grants flight for 20 seconds",
+      "name": "Flight",
+      "duration": 20,
+      "potency": 0
+    },
+    "price": 60
+  },
+  {
+    "name": "Potion of darkvision",
+    "effect": {
+      "description": "Removes the effect of darkness for 3 minutes",
+      "name": "Darkvision",
+      "duration": 180,
+      "potency": 0
+    },
+    "price": 15
+  }
+]

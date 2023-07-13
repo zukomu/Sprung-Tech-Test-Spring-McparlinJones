@@ -1,0 +1,30 @@
+#tooltipContainer{
+    position: absolute;
+    background-image: url(../../../assets/TechTestComponents/Images/Tooltip/IMG_TooltipPanel.png);
+    background-repeat: round;
+    z-index: 6;
+    // these values were obtained by putting the image in GIMP, checking the image size, then scaling it up by a bit as it seemed a little small to me
+    width: 300px;
+    height: 147px;
+    color: #84521e;
+    .tooltip-text-container{
+        padding: 5px 0 0 40px;
+        max-width: 85%;
+        .title{
+            font-family: "MenusPrimaryFont";
+            margin-bottom: 0;
+            line-height: 80%;
+            margin-top: 0.8em;
+            min-height: 1.5em;
+        }
+        .details{
+            font-family: "ToolTipDescription";
+            min-height: 2em;
+        }
+        .price{
+            font-family: "NumericsFont";
+            float: right;
+            margin-right: 16px;
+        }
+    }
+}

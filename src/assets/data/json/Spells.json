@@ -1,0 +1,27 @@
+[
+  {
+    "name": "Teleport",
+    "effect": "Moves you somewhere else",
+    "skillLevel": 3
+  },
+  {
+    "name": "Fly",
+    "effect": "Grants flight for 3 turns",
+    "skillLevel": 2
+  },
+  {
+    "name": "Fireball",
+    "effect": "Shoots a fireball that does 30 damage across a radius of 4 squares",
+    "skillLevel": 0
+  },
+  {
+    "name": "Zetaflare",
+    "effect": "Deal 10000 damage to a single target",
+    "skillLevel": 4
+  },
+  {
+    "name": "Summon Familiar",
+    "effect": "Summon your friendly frog familiar, Bogariel Frogariel, to help with your spell casting",
+    "skillLevel": 1
+  }
+]
